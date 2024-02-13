@@ -15,5 +15,12 @@
         "Password": "123"
       }
     }
-  }
+  },
+  "login1": [
+    ["ahmed@stc.com","12212"],
+    ["ibrahim@stc.com","322232"],
+    ["Moustafa@stc.com","4434333"]
+  ],
+  "ValidationMessage": "Login was unsuccessful. Please correct the errors and try again."
+
 }

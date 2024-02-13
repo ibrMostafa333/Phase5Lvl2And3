@@ -17,6 +17,8 @@ public class LoginPage extends MethodHandles {
 
     private final By loginBtn = By.xpath("//button[contains(text(),'Log in')]");
 
+    private final By validationMessage = By.cssSelector(".message-error.validation-summary-errors");
+
     public void insertEmail(String txt) {
         sendText(emailField, txt);
 
@@ -29,6 +31,10 @@ public class LoginPage extends MethodHandles {
 
     public void clickLoginBtn() {
         bClick(loginBtn);
+    }
+
+    public String getValidationMessage(){
+        return getText(validationMessage);
     }
 
 }

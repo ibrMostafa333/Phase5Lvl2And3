@@ -6,4 +6,8 @@ public class DataModel {
 
    public Login login;
 
+   public Object[][] login1;
+
+   public String ValidationMessage;
+
 }
