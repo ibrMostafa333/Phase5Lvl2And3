@@ -10,9 +10,27 @@ public class HomePage extends MethodHandles {
     }
 
     private final By loginLink = By.xpath("//*[contains(text(),'Log in')]");
+    private final By computersMenu = By.xpath("//*[@class='top-menu notmobile']//a[contains(text(),'Computers')]");
+    private final By noteBookSelection = By.xpath("//*[@class='top-menu notmobile']//a[contains(text(),'Notebooks')]");
 
-    public LoginPage clickLoginLink(){
+
+    public LoginPage clickLoginLink() {
         bClick(loginLink);
         return new LoginPage(driver);
+    }
+
+    private void hoverOverComputers() {
+        hoverOverEelement(computersMenu);
+    }
+
+    private void selectNoteBookPage() {
+        clickWithActions(noteBookSelection);
+
+    }
+
+    public NoteBookPage selectNoteBookItem() {
+        hoverOverComputers();
+        selectNoteBookPage();
+        return new NoteBookPage(driver);
     }
 }
